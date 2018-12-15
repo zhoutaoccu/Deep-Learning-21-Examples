@@ -1,6 +1,7 @@
 # coding: utf-8
 import tensorflow as tf
-from tensorflow.examples.tutorials.mnist import input_data
+#from tensorflow.examples.tutorials.mnist import input_data
+from tensorflow.contrib.learn.python.learn.datasets.mnist import read_data_sets
 
 
 def weight_variable(shape):
@@ -24,7 +25,7 @@ def max_pool_2x2(x):
 
 if __name__ == '__main__':
     # 读入数据
-    mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
+    mnist = read_data_sets("MNIST_data/", one_hot=True)
     # x为训练图像的占位符、y_为训练图像标签的占位符
     x = tf.placeholder(tf.float32, [None, 784])
     y_ = tf.placeholder(tf.float32, [None, 10])

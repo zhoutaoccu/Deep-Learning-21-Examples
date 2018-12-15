@@ -1,8 +1,8 @@
 # coding: utf-8
-from tensorflow.examples.tutorials.mnist import input_data
+from tensorflow.contrib.learn.python.learn.datasets.mnist import read_data_sets
 import numpy as np
 # 读取mnist数据集。如果不存在会事先下载。
-mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
+mnist = read_data_sets("MNIST_data/", one_hot=True)
 
 # 看前20张训练图片的label
 for i in range(20):

@@ -1,10 +1,12 @@
 #coding: utf-8
-from tensorflow.examples.tutorials.mnist import input_data
+#from tensorflow.examples.tutorials.mnist import input_data
+from tensorflow.contrib.learn.python.learn.datasets.mnist import read_data_sets
 import scipy.misc
 import os
 
 # 读取MNIST数据集。如果不存在会事先下载。
-mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
+#mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
+mnist = read_data_sets("MNIST_data/", one_hot=True)
 
 # 我们把原始图片保存在MNIST_data/raw/文件夹下
 # 如果没有这个文件夹会自动创建

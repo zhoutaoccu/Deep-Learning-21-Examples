@@ -1,11 +1,28 @@
 ## Deep-Learning-21-Examples
 
+实验环境对比书本有所不同：
+Ubuntu16.04 
+Python 3.6.6 
+TensorFlow-gpu 1.10.0
+cudatoolkit 8.0
+cudnn 7.1.3
+
+实验准备：
+1.1050Ti Nvidia驱动安装,在系统设置->软件与更新->附加驱动里选择推荐的NVIDIA专有驱动安装，一般都带版本号，比如384.130，这个型号和显卡的性能对应，如果显卡不够好的话，驱动版本比较低，同时后续支持的cuda版本也比较低。可能默认安装tensorflow后需要对cuda进行降级，以匹配你的显卡驱动。安装完驱动，开机才不会让修改grub -e文件，add nomodeset after quite splash, because of Nvidia is not originally supported by linux.
+2.Anaconda安装 
+3.TensorFlow安装 [参考安装方法](https://zhuanlan.zhihu.com/p/50449900)
+4.若cuda版本和显卡驱动不一致，cuda版本降级到合适的版本。conda install cudatoolkit==8.0
+
+实验步骤：
+1.到需要执行的文件夹，右键打开终端 
+2.首先激活之前建立的tf_env环境。source activate tf_env 
+3.用python指令执行代码。(tf_env) zhoutaoccu@ailab:~/Github_project/Deep-Learning-21-Examples-master/chapter_1$ python convolutional.py
+
+
+
 本工程是《21个项目玩转深度学习———基于TensorFlow的实践详解》的配套代码，代码推荐的运行环境为：Ubuntu 14.04，Python 2.7、TensorFlow >= 1.4.0。请尽量使用类UNIX系统和Python 2运行本书的代码。
 
-欢迎有兴趣的同学猛戳下面的链接购买：
-- 京东：[https://item.jd.com/12327358.html](https://item.jd.com/12327358.html)
-- 天猫：[https://detail.tmall.com/item.htm?id=566399074299](https://detail.tmall.com/item.htm?id=566399074299)
-- 当当：[http://product.dangdang.com/25245282.html](http://product.dangdang.com/25245282.html)
+
 
 写作这本书的初衷是希望提供一个**深度学习实践案例的合集**，让每个人都可以在“动手实验”的过程中，比较轻松地掌握深度学习和TensorFlow的使用技巧，并且能完整地做出一些有意思的项目。**希望大家能在实践的过程中找到乐趣，如果有任何问题，欢迎通过[issues](https://github.com/hzy46/Deep-Learning-21-Examples/issues)提出纠错或改进建议。**
 

@@ -3,9 +3,9 @@
 # 这句import tensorflow as tf是导入TensorFlow约定俗成的做法，请大家记住。
 import tensorflow as tf
 # 导入MNIST教学的模块
-from tensorflow.examples.tutorials.mnist import input_data
+from tensorflow.contrib.learn.python.learn.datasets.mnist import read_data_sets
 # 与之前一样，读入MNIST数据
-mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
+mnist = read_data_sets("MNIST_data/", one_hot=True)
 
 # 创建x，x是一个占位符（placeholder），代表待识别的图片
 x = tf.placeholder(tf.float32, [None, 784])
