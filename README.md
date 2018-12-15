@@ -1,6 +1,6 @@
 ## Deep-Learning-21-Examples
 
-实验环境对比书本有所不同：  
+实验环境：  
 Ubuntu 16.04  
 Python 3.6.6  
 TensorFlow-gpu 1.10.0  
